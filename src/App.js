@@ -7,6 +7,7 @@ function App() {
   const [salary, SetSalary] = useState(0);
   const [users, SetNewUser] = useState([]);
   const [errorMessage, SetErrorMessage] = useState("");
+  const regex = /^[a-zA-Z0-9_ ]*$/;
 
   const HandleUserName = (event) => {
     SetName(event.target.value);
@@ -25,8 +26,12 @@ function App() {
       SetErrorMessage("Duplicated user! please add another user");
       return;
     }
-    if (age === 0) {
-      SetErrorMessage("Invalid age! Please input age");
+    if (age <= 1) {
+      SetErrorMessage("Invalid age! Please input user's age");
+      return;
+    }
+    if (!regex.test(name)) {
+      SetErrorMessage("Invalid name! Please re-enter user's name");
       return;
     }
 
