@@ -26,7 +26,7 @@ function App() {
       SetErrorMessage("Duplicated user! please add another user");
       return;
     }
-    if (age <= 1) {
+    if (age <= 1 || age >= 100) {
       SetErrorMessage("Invalid age! Please input user's age");
       return;
     }
