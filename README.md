@@ -17,4 +17,5 @@ Usage
 
 
 Credits
+
 This app was created by Cam as an course assignment. If you have any questions or issues, please feel free to contact me.
