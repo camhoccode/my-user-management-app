@@ -5,6 +5,8 @@ Features
 - Reset the form to empty all input fields.
 - View a table of all users that have been added, displaying their ID, Name, Age, and Salary.
 - Prevents adding a user with a duplicate name.
+- Prevents adding a age below 1 and above 100.
+- Prevents adding a name containing special character.
 
 
 Usage
