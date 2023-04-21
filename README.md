@@ -5,6 +5,8 @@ Features
 - Reset the form to empty all input fields.
 - View a table of all users that have been added, displaying their ID, Name, Age, and Salary.
 - Prevents adding a user with a duplicate name.
+
+
 Usage
 - Clone the repository to your local machine.
 - Install the dependencies by running npm install in your terminal.
@@ -12,5 +14,7 @@ Usage
 - To add a user, fill out the form with a name, age, and salary, then click the "Add" button.
 - To reset the form, click the "Reset Form" button.
 - To view the table of all users, scroll down the page.
+
+
 Credits
 This app was created by Cam as an course assignment. If you have any questions or issues, please feel free to contact me.
