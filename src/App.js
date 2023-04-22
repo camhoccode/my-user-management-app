@@ -9,16 +9,16 @@ function App() {
   const [errorMessage, SetErrorMessage] = useState("");
   const regex = /^[a-zA-Z0-9_ ]*$/;
 
-  const HandleUserName = (event) => {
+  const handleUserName = (event) => {
     SetName(event.target.value);
   };
-  const HandleUserAge = (event) => {
+  const handleUserAge = (event) => {
     SetAge(event.target.value);
   };
-  const HandleUserSalary = (event) => {
+  const handleUserSalary = (event) => {
     SetSalary(event.target.value);
   };
-  const SubmitHandle = (event) => {
+  const submitHandle = (event) => {
     event.preventDefault();
 
     const existingUser = users.find((user) => user.name === name);
@@ -43,7 +43,7 @@ function App() {
     SetSalary("");
     SetErrorMessage("");
   };
-  const ResetUser = (event) => {
+  const resetUser = (event) => {
     SetName("");
     SetAge("");
     SetSalary("");
@@ -54,14 +54,14 @@ function App() {
       {errorMessage && <p>{errorMessage}</p>}
       <div className="userform">
         <h1>User</h1>
-        <form onSubmit={SubmitHandle}>
+        <form onSubmit={submitHandle}>
           <label>
             Name:
             <input
               type="text"
               placeholder="Add user name"
               value={name}
-              onChange={HandleUserName}
+              onChange={handleUserName}
               required
             />
           </label>{" "}
@@ -72,7 +72,7 @@ function App() {
               type="number"
               placeholder="Add user age"
               value={age}
-              onChange={HandleUserAge}
+              onChange={handleUserAge}
               required
             />
           </label>{" "}
@@ -83,13 +83,13 @@ function App() {
               type="number"
               placeholder="Add user salary"
               value={salary}
-              onChange={HandleUserSalary}
+              onChange={handleUserSalary}
               required
             />
           </label>
           <br />
-          <button onSubmit={SubmitHandle}>Add</button>
-          <button onClick={ResetUser}>Reset User</button>
+          <button onSubmit={submitHandle}>Add</button>
+          <button onClick={resetUser}>Reset User</button>
         </form>
       </div>
       <div className="table">
